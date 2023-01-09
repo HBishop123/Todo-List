@@ -1,3 +1,4 @@
+/* general styling start */
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,46 +9,66 @@ body {
   height: 100vh;
   width: 100vw;
 }
+/* general styling end */
 
+/* header styling start */
 header {
   height: 100px;
   background: rgb(184, 178, 178);
-  
+
   display: flex;
   align-items: center;
 }
 
+h3 {
+  padding-left: 20px;
+}
+/* header styling end */
 
-h3{
-    padding-left: 20px;
+/* sidebar styling start */
+.sidebar {
+  background: rgb(2, 2, 2);
+  height: 88vh;
+  width: 200px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
 }
 
-.sidebar{
-    background: rgb(2, 2, 2);
-    height: 88vh;
-    width: 200px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px;
+.sidebar-top {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* sidebar styling end */
+
+/* main area styling start */
+main {
+  display: flex;
+  flex-direction: row;
 }
 
-.sidebar-top{
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.main-area {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
-main{
-    display: flex;
-    flex-direction: row;
+h1 {
+  padding-top: 40px;
 }
 
-
-form{
+form {
   display: flex;
   flex-direction: column;
   display: none;
 }
+
+/* main area styling end */
