@@ -4,13 +4,16 @@ const createTaskDisplay = {
     addTask.addEventListener("click", () => {
       const form = document.querySelector("#addTaskForm");
       form.style.display = "block";
+      addTask.style.display = "none"
     });
   },
   hideDisplay: function () {
     const hideTaskDisplayButton = document.querySelector("#cancel");
+    const addTask = document.getElementById("add-task");
     hideTaskDisplayButton.addEventListener("click", () => {
       const form = document.querySelector("#addTaskForm");
       form.style.display = "none";
+      addTask.style.display = "block"
     });
   },
 };
