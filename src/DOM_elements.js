@@ -3,8 +3,8 @@ const createTaskDisplay = {
     const addTask = document.getElementById("add-task");
     addTask.addEventListener("click", () => {
       const form = document.querySelector("#addTaskForm");
-      form.style.display = "block";
-      addTask.style.display = "none"
+      form.style.display = "flex";
+      addTask.style.display = "none";
     });
   },
   hideDisplay: function () {
@@ -13,7 +13,7 @@ const createTaskDisplay = {
     hideTaskDisplayButton.addEventListener("click", () => {
       const form = document.querySelector("#addTaskForm");
       form.style.display = "none";
-      addTask.style.display = "block"
+      addTask.style.display = "block";
     });
   },
 };
