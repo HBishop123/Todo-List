@@ -49,5 +49,5 @@ main{
 form{
   display: flex;
   flex-direction: column;
-  
+  display: none;
 }
