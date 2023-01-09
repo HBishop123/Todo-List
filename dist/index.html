@@ -28,23 +28,36 @@
         <h1>General Tasks</h1>
         <p id="add-task">Add Task</p>
         <form id="addTaskForm">
-          <input type="text" placeholder="Enter Task" />
-          <input type="date" />
+          <input type="text" id="form-text" placeholder="Enter Task" required />
+          <input type="date" id="date" required />
           <label
             >Importance:
             <label
-              ><input type="radio" name="priority" value="high" />High</label
+              ><input
+                type="radio"
+                name="priority"
+                value="high"
+                required
+              />High</label
             >
             <label
               ><input
                 type="radio"
                 name="priority"
                 value="medium"
+                required
               />Medium</label
             >
-            <label><input type="radio" name="priority" value="low" />Low</label>
+            <label
+              ><input
+                type="radio"
+                name="priority"
+                value="low"
+                required
+              />Low</label
+            >
           </label>
-          <button type="submit">Submit</button>
+          <button id="submit" type="submit">Submit</button>
           <button id="cancel" type="reset">Cancel</button>
         </form>
       </div>
