@@ -97,17 +97,22 @@ const createTaskOnPage = {
   },
 };
 
-
 const displayNotes = {
   showNotesPopup: function () {
     document.addEventListener("DOMContentLoaded", () => {
       document.addEventListener("click", (e) => {
         const target = e.target;
-        if ((target.id === "notes-button") && (target.parentNode.nextSibling.style.display === "none")) {
-          target.parentNode.nextSibling.style.display = "block";}
-          else if ((target.id === "notes-button") && (target.parentNode.nextSibling.style.display === "block")) {
-            target.parentNode.nextSibling.style.display = "none";}
-        
+        if (
+          target.id === "notes-button" &&
+          target.parentNode.nextSibling.style.display === "none"
+        ) {
+          target.parentNode.nextSibling.style.display = "block";
+        } else if (
+          target.id === "notes-button" &&
+          target.parentNode.nextSibling.style.display === "block"
+        ) {
+          target.parentNode.nextSibling.style.display = "none";
+        }
       });
     });
   },
