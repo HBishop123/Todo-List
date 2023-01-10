@@ -53,10 +53,10 @@ const createTaskOnPage = {
 
     const title = document.createElement("p");
 
-    title.innerText = storingData.taskArray[0].title;
+    title.innerText = storingData.taskArray[storingData.taskArrayCounter].title;
     const dueDate = document.createElement("input");
 
-    dueDate.value = storingData.taskArray[0].dueDate;
+    dueDate.value = storingData.taskArray[storingData.taskArrayCounter].dueDate;
     dueDate.type = "date";
     dueDate.id = "date";
     dueDate.name = "date";
@@ -69,6 +69,7 @@ const createTaskOnPage = {
     document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("submit").addEventListener("click", () => {
         this.createTask();
+        storingData.taskArrayCounter++
       });
     });
   },

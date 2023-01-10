@@ -1,6 +1,7 @@
 // Obkect that stores Data of the tasks
 export const storingData = {
   taskArray: [],
+  taskArrayCounter : 0,
 };
 
 console.log(storingData.taskArray);
