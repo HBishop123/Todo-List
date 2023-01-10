@@ -50,6 +50,8 @@ import {
   displayNotes,
 } from "./DOM_elements.js";
 
+import { pushNotesToTaskArray } from "./site-functionality.js";
+
 const flowOfTasks = (function () {
   // hide and show task form
   createTaskDisplay.appendDisplay();
@@ -61,4 +63,9 @@ const flowOfTasks = (function () {
 
   // controls the notes page
   displayNotes.showNotesPopup();
+
+  // pushes notes to the relevant object
+  pushNotesToTaskArray.pushNotes();
+
 })();
+
