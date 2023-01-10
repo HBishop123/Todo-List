@@ -1,6 +1,7 @@
-// Obkect that stores Data of the tasks
+// Object that stores Data of the tasks
 export const storingData = {
   taskArray: [],
+  // this counter allows the correct task object to be appended to the page
   taskArrayCounter : 0,
 };
 
