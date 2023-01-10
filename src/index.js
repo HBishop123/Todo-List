@@ -1,15 +1,20 @@
-let arr = [];
-console.log(arr);
+// Obkect that stores Data of the tasks
+export const storingData = {
+  taskArray: [],
+};
+
+console.log(storingData.taskArray);
+// class constructor for the task object
 class toDo {
-  constructor(title, dueDate, priority, notes, description) {
+  constructor(title, dueDate, priority, notes) {
     this.title = title;
-    this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
     this.notes = notes;
   }
 }
 
+// object to get the form data and push it to the storingData array
 const useFormData = {
   grabFormData: function (e) {
     e.preventDefault();
@@ -24,7 +29,7 @@ const useFormData = {
     const priority = task.priority;
 
     let result = new toDo(title, dueDate, priority);
-    arr.push(result);
+    storingData.taskArray.push(result);
     document.forms[0].reset();
     return this.grabFormData;
   },
@@ -36,17 +41,17 @@ const useFormData = {
     });
   },
 };
-useFormData.attachEventListener()
 
+import { createTaskDisplay, createTaskOnPage } from "./DOM_elements.js";
 
+const flowOfTasks = (function () {
+  createTaskDisplay.appendDisplay();
+  createTaskDisplay.hideDisplay();
+  useFormData.attachEventListener();
+})();
 
-
-
-
-
-
-
-import createTaskDisplay from "./DOM_elements.js";
-
-createTaskDisplay.appendDisplay();
-createTaskDisplay.hideDisplay();
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("submit").addEventListener("click", () => {
+    createTaskOnPage.createTask();
+  });
+});
