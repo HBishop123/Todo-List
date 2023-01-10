@@ -58,5 +58,7 @@ const flowOfTasks = (function () {
   // collect the form data and append it to page
   useFormData.attachEventListener();
   createTaskOnPage.pushTaskToPage();
+
+  // controls the notes page
   displayNotes.showNotesPopup();
 })();

@@ -79,7 +79,7 @@ const createTaskOnPage = {
     notesSection.style.padding = "3px";
     notesSection.style.resize = "none";
     notesSection.style.display = "none";
-    notesSection.id = "notes-section";
+    notesSection.id = `notes-section${storingData.taskArrayCounter}`;
     task.appendChild(notesSection);
 
     mainSection.appendChild(task);
@@ -117,5 +117,6 @@ const displayNotes = {
     });
   },
 };
+
 
 export { createTaskDisplay, createTaskOnPage, displayNotes };
