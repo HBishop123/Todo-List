@@ -29,21 +29,48 @@ const createTaskDisplay = {
 
 const createTaskOnPage = {
   createTask: function () {
-    const mainSection = document.querySelector("main");
+    const mainSection = document.querySelector(".main-area");
     const task = document.createElement("div");
-    task.style.height = "200px";
-    task.style.width = "100%";
+    task.style.width = "50%";
+    task.style.height = "100px";
+    task.style.backgroundColor = "grey";
+    task.style.display = "flex";
+    task.style.flexDirection = "column";
+
+    const titleContainer = document.createElement("div");
+    titleContainer.style.display = "flex";
+    titleContainer.style.alignItems = "top";
+    titleContainer.style.justifyContent = "center";
+    task.appendChild(titleContainer);
+
+    const dateContainer = document.createElement("div");
+    dateContainer.style.height = "100%";
+    dateContainer.style.display = "flex";
+    dateContainer.style.alignItems = "center";
+    dateContainer.style.justifyContent = "flex-end";
+    dateContainer.style.padding = "0px 25px 10px 0px";
+    task.appendChild(dateContainer);
 
     const title = document.createElement("p");
+
     title.innerText = storingData.taskArray[0].title;
     const dueDate = document.createElement("input");
+
     dueDate.value = storingData.taskArray[0].dueDate;
     dueDate.type = "date";
     dueDate.id = "date";
     dueDate.name = "date";
+
     mainSection.appendChild(task);
-    task.appendChild(title);
-    task.appendChild(dueDate);
+    titleContainer.appendChild(title);
+    dateContainer.appendChild(dueDate);
+  },
+  pushTaskToPage: function () {
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("submit").addEventListener("click", () => {
+        this.createTask();
+      });
+    });
   },
 };
 

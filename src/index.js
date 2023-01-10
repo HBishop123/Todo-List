@@ -48,10 +48,5 @@ const flowOfTasks = (function () {
   createTaskDisplay.appendDisplay();
   createTaskDisplay.hideDisplay();
   useFormData.attachEventListener();
+  createTaskOnPage.pushTaskToPage();
 })();
-
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("submit").addEventListener("click", () => {
-    createTaskOnPage.createTask();
-  });
-});
