@@ -31,6 +31,7 @@ const createTaskOnPage = {
   createTask: function () {
     const mainSection = document.querySelector(".main-area");
     const task = document.createElement("div");
+    task.id = "task-container";
     task.style.width = "50%";
     task.style.height = "100px";
     task.style.backgroundColor = "grey";
@@ -50,6 +51,7 @@ const createTaskOnPage = {
     dateContainer.style.display = "flex";
     dateContainer.style.alignItems = "center";
     dateContainer.style.justifyContent = "space-around";
+    dateContainer.id = "button-date-container";
     task.appendChild(dateContainer);
 
     // creating title of task
@@ -66,7 +68,7 @@ const createTaskOnPage = {
     // creating the pop-up text box
     const notesButton = document.createElement("button");
     notesButton.innerText = "Notes";
-    notesButton.id = "notesButton";
+    notesButton.id = "notes-button";
     dateContainer.appendChild(notesButton);
 
     // create notes section
@@ -76,7 +78,8 @@ const createTaskOnPage = {
     notesSection.style.wordBreak = "break-all";
     notesSection.style.padding = "3px";
     notesSection.style.resize = "none";
-
+    notesSection.style.display = "none";
+    notesSection.id = "notes-section";
     task.appendChild(notesSection);
 
     mainSection.appendChild(task);
@@ -94,14 +97,17 @@ const createTaskOnPage = {
   },
 };
 
-const DisplayNotes = {
+const displayNotes = {
   showNotesPopup: function () {
     document.addEventListener("DOMContentLoaded", () => {
-      document
-        .getElementById("notesButton")
-        .addEventListener("click", () => {});
+      document.addEventListener("click", (e) => {
+        const target = e.target;
+        if (target.id === "notes-button") {
+          target.parentNode.nextSibling.style.display = "block";
+        }
+      });
     });
   },
 };
 
-export { createTaskDisplay, createTaskOnPage, DisplayNotes };
+export { createTaskDisplay, createTaskOnPage, displayNotes };

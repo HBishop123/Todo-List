@@ -44,12 +44,19 @@ const useFormData = {
   },
 };
 
-import { createTaskDisplay, createTaskOnPage } from "./DOM_elements.js";
+import {
+  createTaskDisplay,
+  createTaskOnPage,
+  displayNotes,
+} from "./DOM_elements.js";
 
 const flowOfTasks = (function () {
+  // hide and show task form
   createTaskDisplay.appendDisplay();
   createTaskDisplay.hideDisplay();
 
+  // collect the form data and append it to page
   useFormData.attachEventListener();
   createTaskOnPage.pushTaskToPage();
+  displayNotes.showNotesPopup();
 })();
