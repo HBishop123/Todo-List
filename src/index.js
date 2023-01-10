@@ -2,7 +2,7 @@
 export const storingData = {
   taskArray: [],
   // this counter allows the correct task object to be appended to the page
-  taskArrayCounter : 0,
+  taskArrayCounter: 0,
 };
 
 console.log(storingData.taskArray);
@@ -49,6 +49,7 @@ import { createTaskDisplay, createTaskOnPage } from "./DOM_elements.js";
 const flowOfTasks = (function () {
   createTaskDisplay.appendDisplay();
   createTaskDisplay.hideDisplay();
+
   useFormData.attachEventListener();
   createTaskOnPage.pushTaskToPage();
 })();

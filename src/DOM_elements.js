@@ -37,42 +37,71 @@ const createTaskOnPage = {
     task.style.display = "flex";
     task.style.flexDirection = "column";
 
+    // Creating the container for the title
     const titleContainer = document.createElement("div");
     titleContainer.style.display = "flex";
     titleContainer.style.alignItems = "top";
     titleContainer.style.justifyContent = "center";
     task.appendChild(titleContainer);
 
+    // Creating the container for the date
     const dateContainer = document.createElement("div");
     dateContainer.style.height = "100%";
     dateContainer.style.display = "flex";
     dateContainer.style.alignItems = "center";
-    dateContainer.style.justifyContent = "flex-end";
-    dateContainer.style.padding = "0px 25px 10px 0px";
+    dateContainer.style.justifyContent = "space-around";
     task.appendChild(dateContainer);
 
+    // creating title of task
     const title = document.createElement("p");
-
     title.innerText = storingData.taskArray[storingData.taskArrayCounter].title;
-    const dueDate = document.createElement("input");
 
+    // creating the date to be completed by
+    const dueDate = document.createElement("input");
     dueDate.value = storingData.taskArray[storingData.taskArrayCounter].dueDate;
     dueDate.type = "date";
     dueDate.id = "date";
     dueDate.name = "date";
 
+    // creating the pop-up text box
+    const notesButton = document.createElement("button");
+    notesButton.innerText = "Notes";
+    notesButton.id = "notesButton";
+    dateContainer.appendChild(notesButton);
+
+    // create notes section
+    const notesSection = document.createElement("textarea");
+    notesSection.style.height = "100%";
+    notesSection.style.width = "100%";
+    notesSection.style.wordBreak = "break-all";
+    notesSection.style.padding = "3px";
+    notesSection.style.resize = "none";
+
+    task.appendChild(notesSection);
+
     mainSection.appendChild(task);
     titleContainer.appendChild(title);
     dateContainer.appendChild(dueDate);
   },
+
   pushTaskToPage: function () {
     document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("submit").addEventListener("click", () => {
         this.createTask();
-        storingData.taskArrayCounter++
+        storingData.taskArrayCounter++;
       });
     });
   },
 };
 
-export { createTaskDisplay, createTaskOnPage };
+const DisplayNotes = {
+  showNotesPopup: function () {
+    document.addEventListener("DOMContentLoaded", () => {
+      document
+        .getElementById("notesButton")
+        .addEventListener("click", () => {});
+    });
+  },
+};
+
+export { createTaskDisplay, createTaskOnPage, DisplayNotes };
