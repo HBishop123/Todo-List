@@ -57,7 +57,8 @@ const flowOfTasks = (function () {
   createTaskDisplay.appendDisplay();
   createTaskDisplay.hideDisplay();
 
-  // collect the form data and append it to page
+  // collect the form data and pushes it to the task array.
+  // data is taken from the task array and pushed to the display for the user
   useFormData.attachEventListener();
   createTaskOnPage.pushTaskToPage();
 
