@@ -7,6 +7,9 @@
     <title>Todo-list</title>
     <script type="module" src="../src/index.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Asap:wght@500&family=Roboto&display=swap");
+    </style>
   </head>
   <body>
     <header>
@@ -27,41 +30,63 @@
       <div class="main-area">
         <h1>General Tasks</h1>
         <p id="add-task">Add Task</p>
-        <form id="addTaskForm">
-          <input type="text" id="form-text" placeholder="Enter Task" required />
-          <input type="date" id="date" required />
-          <label
-            >Importance:
-            <label
-              ><input
-                type="radio"
-                name="priority"
-                value="high"
-                required
-              />High</label
-            >
-            <label
-              ><input
-                type="radio"
-                name="priority"
-                value="medium"
-                required
-              />Medium</label
-            >
-            <label
-              ><input
-                type="radio"
-                name="priority"
-                value="low"
-                required
-              />Low</label
-            >
-          </label>
-          <button id="submit" type="submit">Submit</button>
-          <button id="cancel" type="reset">Cancel</button>
-        </form>
 
-        
+        <form id="addTaskForm">
+          <div class="top-layer">
+            <h2>New Task</h2>
+            <p>X</p>
+          </div>
+          <div class="second-layer">
+            <div class="second-layer-left">
+              <p>Title:</p>
+              <input
+                type="text"
+                id="form-text"
+                placeholder="Enter Task"
+                required
+              />
+              <p>Notes:</p>
+              <textarea name="notes" rows="12" id="notes"></textarea>
+            </div>
+            <div class="second-layer-right">
+              <p>Due Date:</p>
+              <input type="date" id="date" required />
+              <div class="box-container">
+                <label
+                  >Importance:
+                  <label
+                    ><input
+                      type="radio"
+                      name="priority"
+                      value="high"
+                      required
+                    />High</label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="priority"
+                      value="medium"
+                      required
+                    />Medium</label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="priority"
+                      value="low"
+                      required
+                    />Low</label
+                  >
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="third-layer">
+            <button id="submit" type="submit">Submit</button>
+            <button id="cancel" type="reset">Close</button>
+          </div>
+        </form>
       </div>
     </main>
   </body>

@@ -15,7 +15,6 @@ body {
 header {
   height: 100px;
   background: rgb(184, 178, 178);
-
   display: flex;
   align-items: center;
 }
@@ -65,11 +64,85 @@ h1 {
   padding-top: 40px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  display: none;
-}
-
 /* main area styling end */
 
+/* form styling start */
+
+form {
+  height: 400px;
+  width: 800px;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: "Asap", sans-serif;
+  /* display: none; */
+}
+
+.top-layer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.second-layer {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap: 15px;
+}
+
+.second-layer-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.second-layer-left > input {
+  margin-bottom: 30px;
+}
+
+textarea {
+  resize: none;
+}
+
+.second-layer-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.second-layer-right > input {
+  margin-bottom: 40px;
+}
+
+.box-container > label {
+  display: flex;
+  flex-direction: column;
+}
+
+.third-layer {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+#cancel,
+#submit {
+  height: 38px;
+}
+
+#cancel {
+  width: 64.31px;
+}
+
+#submit {
+  width: 89.02px;
+}
