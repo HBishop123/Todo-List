@@ -3,6 +3,7 @@ export const storingData = {
   taskArray: [],
   // this counter allows the correct task object to be appended to the page
   taskArrayCounter: 0,
+  deleteButtonCounter: -1
 };
 
 console.log(storingData.taskArray);
@@ -50,7 +51,10 @@ import {
   displayNotes,
 } from "./DOM_elements.js";
 
-import { pushNotesToTaskArray } from "./site-functionality.js";
+import {
+  pushNotesToTaskArray,
+  deleteButtonFunctionality,
+} from "./site-functionality.js";
 
 const flowOfTasks = (function () {
   // hide and show task form
@@ -61,7 +65,6 @@ const flowOfTasks = (function () {
   // data is taken from the task array and pushed to the display for the user
   useFormData.attachEventListener();
   createTaskOnPage.pushTaskToPage();
-  
 
   // controls the notes page
   displayNotes.showNotesPopup();
@@ -69,5 +72,6 @@ const flowOfTasks = (function () {
   // pushes notes to the relevant object
   pushNotesToTaskArray.pushNotes();
 
+  // delete-button functionality
+  deleteButtonFunctionality.deleteButtonFunction()
 })();
-

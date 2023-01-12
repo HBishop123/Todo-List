@@ -31,7 +31,7 @@ const createTaskOnPage = {
   createTask: function () {
     const mainSection = document.querySelector(".main-area");
     const task = document.createElement("div");
-    task.id = "task-container";
+    task.className = "taskContainer"
     task.style.width = "50%";
     task.style.height = "100px";
     task.style.backgroundColor = "grey";
@@ -52,20 +52,21 @@ const createTaskOnPage = {
     dateContainer.style.display = "flex";
     dateContainer.style.alignItems = "center";
     dateContainer.style.justifyContent = "space-around";
-    dateContainer.id = "button-date-container";
+    dateContainer.className = "button-date-container";
+    dateContainer.style.flexDirection = "row-reverse";
     task.appendChild(dateContainer);
 
     // creating title of task
     const title = document.createElement("p");
     title.innerText = storingData.taskArray[storingData.taskArrayCounter].title;
-    title.style.position = "absolute"
+    title.style.position = "absolute";
     titleContainer.appendChild(title);
 
     // creating the date to be completed by
     const dueDate = document.createElement("input");
     dueDate.value = storingData.taskArray[storingData.taskArrayCounter].dueDate;
     dueDate.type = "date";
-    dueDate.id = "date";
+    dueDate.className = "date";
     dueDate.name = "date";
     dateContainer.appendChild(dueDate);
 
@@ -88,13 +89,16 @@ const createTaskOnPage = {
 
     // create delete button
     const deleteButton = document.createElement("button");
+    deleteButton.className = "delete-button";
+    deleteButton.id = `${storingData.deleteButtonCounter}`
     deleteButton.style.width = "15px";
     deleteButton.style.height = "15px";
     deleteButton.style.marginLeft = "auto";
-    deleteButton.innerText = "X"
-    deleteButton.style.display = "flex"
-    deleteButton.style.alignItems = "center"
-    deleteButton.style.justifyContent = "center"
+    deleteButton.innerText = "X";
+    deleteButton.style.display = "flex";
+    deleteButton.style.alignItems = "center";
+    deleteButton.style.justifyContent = "center";
+    deleteButton.style.backgroundColor = "red";
     titleContainer.appendChild(deleteButton);
   },
 
