@@ -37,11 +37,12 @@ const createTaskOnPage = {
     task.style.backgroundColor = "grey";
     task.style.display = "flex";
     task.style.flexDirection = "column";
+    mainSection.appendChild(task);
 
     // Creating the container for the title
     const titleContainer = document.createElement("div");
     titleContainer.style.display = "flex";
-    titleContainer.style.alignItems = "top";
+    titleContainer.style.flexDirection = "row-reverse";
     titleContainer.style.justifyContent = "center";
     task.appendChild(titleContainer);
 
@@ -57,6 +58,8 @@ const createTaskOnPage = {
     // creating title of task
     const title = document.createElement("p");
     title.innerText = storingData.taskArray[storingData.taskArrayCounter].title;
+    title.style.position = "absolute"
+    titleContainer.appendChild(title);
 
     // creating the date to be completed by
     const dueDate = document.createElement("input");
@@ -64,6 +67,7 @@ const createTaskOnPage = {
     dueDate.type = "date";
     dueDate.id = "date";
     dueDate.name = "date";
+    dateContainer.appendChild(dueDate);
 
     // creating the pop-up text box
     const notesButton = document.createElement("button");
@@ -82,9 +86,13 @@ const createTaskOnPage = {
     notesSection.id = `${storingData.taskArrayCounter}`;
     task.appendChild(notesSection);
 
-    mainSection.appendChild(task);
-    titleContainer.appendChild(title);
-    dateContainer.appendChild(dueDate);
+    // create delete button
+    const deleteButton = document.createElement("button");
+    deleteButton.style.width = "15px";
+    deleteButton.style.height = "15px";
+    deleteButton.style.marginLeft = "auto";
+
+    titleContainer.appendChild(deleteButton);
   },
 
   pushTaskToPage: function () {
@@ -117,6 +125,5 @@ const displayNotes = {
     });
   },
 };
-
 
 export { createTaskDisplay, createTaskOnPage, displayNotes };

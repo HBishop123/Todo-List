@@ -61,6 +61,7 @@ const flowOfTasks = (function () {
   // data is taken from the task array and pushed to the display for the user
   useFormData.attachEventListener();
   createTaskOnPage.pushTaskToPage();
+  
 
   // controls the notes page
   displayNotes.showNotesPopup();
