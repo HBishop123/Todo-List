@@ -14,7 +14,7 @@ export const storingData = {
   taskArray: [],
   // this counter allows the correct task object to be appended to the page
   taskArrayCounter: 0,
-  deleteButtonCounter: 0
+  deleteButtonCounter: 0,
 };
 
 console.log(storingData.taskArray);
@@ -56,8 +56,6 @@ const useFormData = {
   },
 };
 
-
-
 const flowOfTasks = (function () {
   // hide and show task form
   createTaskDisplay.appendDisplay();
@@ -75,5 +73,5 @@ const flowOfTasks = (function () {
   pushNotesToTaskArray.pushNotes();
 
   // delete-button functionality
-  deleteButtonFunctionality.deleteButtonFunction()
+  deleteButtonFunctionality.deleteButtonFunction();
 })();

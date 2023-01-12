@@ -15,7 +15,6 @@ export const pushNotesToTaskArray = {
   },
 };
 
-
 export const deleteButtonFunctionality = {
   deleteButtonFunction: function () {
     document.addEventListener("DOMContentLoaded", () => {
@@ -32,7 +31,7 @@ export const deleteButtonFunctionality = {
           for (let i = 0; i < storingData.taskArray.length; i++) {
             createTaskOnPage.createTask();
             storingData.taskArrayCounter++;
-            storingData.deleteButtonCounter++
+            storingData.deleteButtonCounter++;
           }
         }
       });

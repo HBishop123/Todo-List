@@ -37,7 +37,6 @@ const createTaskOnPage = {
     task.style.backgroundColor = "grey";
     task.style.display = "flex";
     task.style.flexDirection = "column";
-    mainSection.appendChild(task);
 
     // Creating the container for the title
     const titleContainer = document.createElement("div");
@@ -105,6 +104,8 @@ const createTaskOnPage = {
     deleteButton.style.justifyContent = "center";
     deleteButton.style.backgroundColor = "red";
     titleContainer.appendChild(deleteButton);
+
+    mainSection.appendChild(task);
   },
 
   pushTaskToPage: function () {
