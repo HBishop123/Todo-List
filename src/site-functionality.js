@@ -15,6 +15,7 @@ export const pushNotesToTaskArray = {
   },
 };
 
+
 export const deleteButtonFunctionality = {
   deleteButtonFunction: function () {
     document.addEventListener("DOMContentLoaded", () => {
@@ -26,11 +27,12 @@ export const deleteButtonFunctionality = {
           allTaskCards.forEach((x) => x.remove());
           storingData.taskArray.splice(target.id, 1);
           storingData.taskArrayCounter = 0;
-          storingData.deleteButtonCounter = -1;
+          storingData.deleteButtonCounter = 0;
 
           for (let i = 0; i < storingData.taskArray.length; i++) {
             createTaskOnPage.createTask();
-            createTaskOnPage.pushTaskToPage();
+            storingData.taskArrayCounter++;
+            storingData.deleteButtonCounter++
           }
         }
       });

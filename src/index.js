@@ -14,7 +14,7 @@ export const storingData = {
   taskArray: [],
   // this counter allows the correct task object to be appended to the page
   taskArrayCounter: 0,
-  deleteButtonCounter: -1
+  deleteButtonCounter: 0
 };
 
 console.log(storingData.taskArray);

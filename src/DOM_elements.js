@@ -105,8 +105,9 @@ const createTaskOnPage = {
   pushTaskToPage: function () {
     document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("submit").addEventListener("click", () => {
-        this.createTask();
+        createTaskOnPage.createTask();
         storingData.taskArrayCounter++;
+        storingData.deleteButtonCounter++
       });
     });
   },
