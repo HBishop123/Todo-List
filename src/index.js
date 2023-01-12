@@ -37,12 +37,14 @@ const useFormData = {
       title: document.getElementById("form-text").value,
       date: document.getElementById("date").value,
       priority: document.querySelector('input[name="priority"]:checked').value,
+      notes: document.querySelector('#notes').value
     };
     const title = task.title;
     const dueDate = task.date;
     const priority = task.priority;
+    const notes = task.notes
 
-    let result = new toDo(title, dueDate, priority);
+    let result = new toDo(title, dueDate, priority, notes);
     storingData.taskArray.push(result);
     document.forms[0].reset();
     return this.grabFormData;
