@@ -1,3 +1,14 @@
+import {
+  createTaskDisplay,
+  createTaskOnPage,
+  displayNotes,
+} from "./DOM_elements.js";
+
+import {
+  pushNotesToTaskArray,
+  deleteButtonFunctionality,
+} from "./site-functionality.js";
+
 // Object that stores Data of the tasks
 export const storingData = {
   taskArray: [],
@@ -45,16 +56,7 @@ const useFormData = {
   },
 };
 
-import {
-  createTaskDisplay,
-  createTaskOnPage,
-  displayNotes,
-} from "./DOM_elements.js";
 
-import {
-  pushNotesToTaskArray,
-  deleteButtonFunctionality,
-} from "./site-functionality.js";
 
 const flowOfTasks = (function () {
   // hide and show task form

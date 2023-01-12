@@ -29,7 +29,7 @@ export const deleteButtonFunctionality = {
           storingData.deleteButtonCounter = -1;
 
           for (let i = 0; i < storingData.taskArray.length; i++) {
-            createTaskOnPage.createTask()
+            createTaskOnPage.createTask();
             createTaskOnPage.pushTaskToPage();
           }
         }
