@@ -91,7 +91,6 @@ const createTaskOnPage = {
     deleteButton.style.width = "15px";
     deleteButton.style.height = "15px";
     deleteButton.style.marginLeft = "auto";
-
     titleContainer.appendChild(deleteButton);
   },
 
