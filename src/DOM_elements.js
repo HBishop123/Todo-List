@@ -31,7 +31,7 @@ const createTaskOnPage = {
   createTask: function () {
     const mainSection = document.querySelector(".main-area");
     const task = document.createElement("div");
-    task.className = "taskContainer"
+    task.className = "taskContainer";
     task.style.width = "50%";
     task.style.height = "100px";
     task.style.backgroundColor = "grey";
@@ -84,13 +84,18 @@ const createTaskOnPage = {
     notesSection.style.padding = "3px";
     notesSection.style.resize = "none";
     notesSection.style.display = "none";
+    notesSection.value =
+      storingData.taskArray[storingData.taskArrayCounter].notes;
+    if (notesSection.value === "undefined") {
+      notesSection.value = "";
+    }
     notesSection.id = `${storingData.taskArrayCounter}`;
     task.appendChild(notesSection);
 
     // create delete button
     const deleteButton = document.createElement("button");
     deleteButton.className = "delete-button";
-    deleteButton.id = `${storingData.deleteButtonCounter}`
+    deleteButton.id = `${storingData.deleteButtonCounter}`;
     deleteButton.style.width = "15px";
     deleteButton.style.height = "15px";
     deleteButton.style.marginLeft = "auto";
@@ -107,7 +112,7 @@ const createTaskOnPage = {
       document.getElementById("submit").addEventListener("click", () => {
         createTaskOnPage.createTask();
         storingData.taskArrayCounter++;
-        storingData.deleteButtonCounter++
+        storingData.deleteButtonCounter++;
       });
     });
   },
