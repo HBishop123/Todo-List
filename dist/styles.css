@@ -28,7 +28,7 @@ h3 {
 /* sidebar styling start */
 .sidebar {
   background: rgb(2, 2, 2);
-  height: 88vh;
+  height: auto;
   width: 200px;
   color: white;
   display: flex;
