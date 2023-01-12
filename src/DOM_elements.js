@@ -128,11 +128,13 @@ const displayNotes = {
           target.id === "notes-button" &&
           target.parentNode.nextSibling.style.display === "none"
         ) {
+          target.innerText = "Click to Save Notes"
           target.parentNode.nextSibling.style.display = "block";
         } else if (
           target.id === "notes-button" &&
           target.parentNode.nextSibling.style.display === "block"
         ) {
+          target.innerText = "Notes"
           target.parentNode.nextSibling.style.display = "none";
         }
       });
