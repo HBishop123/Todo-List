@@ -115,7 +115,7 @@ form {
   margin-bottom: 2px;
 }
 
-textarea {
+form > textarea {
   resize: none;
   font-size: 18px;
   border-radius: 5px;
