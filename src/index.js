@@ -36,7 +36,7 @@ const useFormData = {
     const task = {
       title: document.getElementById("form-text").value,
       date: document.getElementById("date").value,
-      priority: document.querySelector('input[name="priority"]:checked').value,
+      priority: document.querySelector('select[name="select"]').value,
       notes: document.querySelector('#notes').value
     };
     const title = task.title;
