@@ -128,13 +128,13 @@ const displayNotes = {
           target.id === "notes-button" &&
           target.parentNode.nextSibling.style.display === "none"
         ) {
-          target.innerText = "Click to Save Notes"
+          target.innerText = "Click to Save Notes";
           target.parentNode.nextSibling.style.display = "block";
         } else if (
           target.id === "notes-button" &&
           target.parentNode.nextSibling.style.display === "block"
         ) {
-          target.innerText = "Notes"
+          target.innerText = "Notes";
           target.parentNode.nextSibling.style.display = "none";
         }
       });
@@ -142,4 +142,9 @@ const displayNotes = {
   },
 };
 
-export { createTaskDisplay, createTaskOnPage, displayNotes };
+
+export {
+  createTaskDisplay,
+  createTaskOnPage,
+  displayNotes,
+};
