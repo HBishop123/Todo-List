@@ -9,28 +9,31 @@
 body {
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
+  background-color: white;
 }
 /* general styling end */
 
 /* header styling start */
 header {
-  height: 100px;
-  background: rgb(184, 178, 178);
+  height: 50px;
+  background: #DB4C3F;
   display: flex;
   align-items: center;
 }
 
 h3 {
   padding-left: 20px;
+  
 }
 /* header styling end */
 
 /* sidebar styling start */
 .sidebar {
-  background: rgb(2, 2, 2);
+  background: #F7F7F7;
   height: auto;
   width: 200px;
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,13 +75,14 @@ h1 {
 form {
   height: 400px;
   width: 800px;
-  background-color: grey;
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   font-size: 16px;
   font-family: "Asap", sans-serif;
   border-radius: 5px;
   display: none;
+  border: 1px solid grey;
 }
 
 .top-layer {
@@ -86,7 +90,7 @@ form {
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
-  box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px -2px 0px 0px rgba(104, 102, 102, 0.75);
 }
 
 .second-layer {
@@ -107,7 +111,7 @@ form {
   height: 30px;
   font-size: 20px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid grey;
   padding: 3px;
 }
 
@@ -115,11 +119,11 @@ form {
   margin-bottom: 2px;
 }
 
-textarea{
+textarea {
   resize: none;
   font-size: 18px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid grey;
   padding: 3px;
   height: 160px;
 }
@@ -135,7 +139,7 @@ textarea{
   height: 30px;
   font-size: 20px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid grey;
   padding: 3px;
 }
 
@@ -171,4 +175,23 @@ textarea{
 
 #submit {
   width: 89.02px;
+}
+
+/* form styling end */
+
+#add-task:hover {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+form{
+  animation:  fadeIn 0.5s;
 }
