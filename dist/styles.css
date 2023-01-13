@@ -115,15 +115,13 @@ form {
   margin-bottom: 2px;
 }
 
-form > textarea {
+textarea{
+  resize: none;
   font-size: 18px;
   border-radius: 5px;
   border: none;
   padding: 3px;
-}
-
-textarea{
-  resize: none;
+  height: 160px;
 }
 
 .second-layer-right {
