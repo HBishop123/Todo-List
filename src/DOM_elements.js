@@ -14,6 +14,7 @@ const createTaskDisplay = {
     const form = document.querySelector("#addTaskForm");
     const hideTaskDisplayButton = document.querySelector("#cancel");
     const hideTaskDisplayButtonWithSubmit = document.querySelector("#submit");
+    const cancelButtonTopRight = document.querySelector("#delete-button-task");
 
     hideTaskDisplayButtonWithSubmit.addEventListener("click", () => {
       form.style.display = "none";
@@ -21,6 +22,11 @@ const createTaskDisplay = {
     });
 
     hideTaskDisplayButton.addEventListener("click", () => {
+      form.style.display = "none";
+      addTask.style.display = "block";
+    });
+
+    cancelButtonTopRight.addEventListener("click", () => {
       form.style.display = "none";
       addTask.style.display = "block";
     });
