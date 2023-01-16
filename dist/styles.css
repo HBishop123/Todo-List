@@ -17,20 +17,19 @@ body {
 /* header styling start */
 header {
   height: 50px;
-  background: #DB4C3F;
+  background: #db4c3f;
   display: flex;
   align-items: center;
 }
 
 h3 {
   padding-left: 20px;
-  
 }
 /* header styling end */
 
 /* sidebar styling start */
 .sidebar {
-  background: #F7F7F7;
+  background: #f7f7f7;
   height: auto;
   width: 200px;
   color: rgb(0, 0, 0);
@@ -52,7 +51,6 @@ h3 {
 main {
   display: flex;
   flex-direction: row;
-  
 }
 
 .main-area {
@@ -170,13 +168,35 @@ textarea {
   border: none;
 }
 
+#cancel:hover,
+#submit:hover {
+  cursor: pointer;
+  box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
 #cancel {
   width: 64.31px;
 }
 
+#cancel:hover {
+  background-color: red;
+}
+
 #submit {
   width: 89.02px;
-  
+}
+
+#submit:hover {
+  background-color: rgb(36, 207, 36);
+}
+#delete-button-task:hover {
+  cursor: pointer;
+  color: red;
+  scale: 1.2;
+}
+
+form {
+  animation: fadeIn 0.5s;
 }
 
 /* form styling end */
@@ -186,22 +206,10 @@ textarea {
 }
 
 @keyframes fadeIn {
-  from{
+  from {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
-}
-
-@keyframes fadeOut {
-  from{ opacity: 1;
-  }
-  to{
-    opacity: 0;
-  }
-}
-
-form{
-  animation:  fadeIn 0.5s;
 }

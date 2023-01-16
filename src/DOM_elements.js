@@ -93,12 +93,12 @@ const createTaskOnPage = {
 
     // create delete button
     const deleteButton = document.createElement("button");
-    deleteButton.className = "delete-button";
+    deleteButton.classList.add("delete-button");
     deleteButton.id = `${storingData.deleteButtonCounter}`;
     deleteButton.style.width = "15px";
     deleteButton.style.height = "15px";
     deleteButton.style.marginLeft = "auto";
-    deleteButton.innerText = "X";
+    deleteButton.textContent = "X";
     deleteButton.style.display = "flex";
     deleteButton.style.alignItems = "center";
     deleteButton.style.justifyContent = "center";
@@ -142,9 +142,4 @@ const displayNotes = {
   },
 };
 
-
-export {
-  createTaskDisplay,
-  createTaskOnPage,
-  displayNotes,
-};
+export { createTaskDisplay, createTaskOnPage, displayNotes };

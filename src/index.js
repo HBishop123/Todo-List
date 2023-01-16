@@ -37,12 +37,12 @@ const useFormData = {
       title: document.getElementById("form-text").value,
       date: document.getElementById("date").value,
       priority: document.querySelector('select[name="select"]').value,
-      notes: document.querySelector('#notes').value
+      notes: document.querySelector("#notes").value,
     };
     const title = task.title;
     const dueDate = task.date;
     const priority = task.priority;
-    const notes = task.notes
+    const notes = task.notes;
 
     let result = new toDo(title, dueDate, priority, notes);
     storingData.taskArray.push(result);
@@ -76,6 +76,4 @@ const flowOfTasks = (function () {
 
   // delete-button functionality
   deleteButtonFunctionality.deleteButtonFunction();
-
-  
 })();
