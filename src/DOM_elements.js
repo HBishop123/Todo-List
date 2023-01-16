@@ -40,7 +40,8 @@ const createTaskOnPage = {
     task.className = "taskContainer";
     task.style.width = "50%";
     task.style.height = "100px";
-    task.style.backgroundColor = "grey";
+    task.style.backgroundColor = "white";
+    task.style.borderBottom = "1px solid black"
     task.style.display = "flex";
     task.style.flexDirection = "column";
 
