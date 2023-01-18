@@ -49,7 +49,7 @@ const createAddProjectDisplay = {
     const addProject = document.getElementById("projects");
     const lowerForm = document.querySelector("#add-project");
     const addTask = document.getElementById("add-task");
-    const formText = document.getElementById("name-input");
+    const formText = document.getElementById("name-input")
     const cancelButtonCross = document.getElementById(
       "delete-button-task-lower"
     );
@@ -62,9 +62,7 @@ const createAddProjectDisplay = {
     });
 
     submitButton.addEventListener("click", () => {
-      if (formText.value === "") {
-        return alert("Input cannot be left empty");
-      } else addProject.style.pointerEvents = "auto";
+      addProject.style.pointerEvents = "auto";
       addTask.style.display = "none";
       lowerForm.style.display = "none";
     });
