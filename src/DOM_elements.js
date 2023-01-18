@@ -33,6 +33,41 @@ const createTaskDisplay = {
   },
 };
 
+const createAddProjectDisplay = {
+  revealProjectDisplay: function () {
+    const addProject = document.getElementById("projects");
+    const lowerForm = document.querySelector("#add-project");
+    const addTask = document.getElementById("add-task");
+    addProject.addEventListener("click", () => {
+      lowerForm.style.display = "flex";
+      addTask.style.display = "none";
+      addProject.style.pointerEvents = "none";
+    });
+  },
+
+  hideProjectDisplay: function () {
+    const addProject = document.getElementById("projects");
+    const lowerForm = document.querySelector("#add-project");
+    const addTask = document.getElementById("add-task");
+    const cancelButtonCross = document.getElementById(
+      "delete-button-task-lower"
+    );
+    const submitButton = document.getElementById("submit-lower");
+
+    cancelButtonCross.addEventListener("click", () => {
+      addProject.style.pointerEvents = "auto";
+      addTask.style.display = "none";
+      lowerForm.style.display = "none";
+    });
+
+    submitButton.addEventListener("click", () => {
+      addProject.style.pointerEvents = "auto";
+      addTask.style.display = "none";
+      lowerForm.style.display = "none";
+    });
+  },
+};
+
 const createTaskOnPage = {
   createTask: function () {
     const mainSection = document.querySelector(".main-area");
@@ -41,7 +76,7 @@ const createTaskOnPage = {
     task.style.width = "50%";
     task.style.height = "100px";
     task.style.backgroundColor = "white";
-    task.style.borderBottom = "1px solid black"
+    task.style.borderBottom = "1px solid black";
     task.style.display = "flex";
     task.style.flexDirection = "column";
 
@@ -150,14 +185,17 @@ const displayNotes = {
 };
 
 const projects = {
-  projectLink: function() {
-    const projects = document.getElementById('projects')
-    document.addEventListener('DOMContentLoaded', () => {
-      projects.addEventListener('click', () => {
-        
-      })
-    })
-  }
-}
+  projectLink: function () {
+    const projects = document.getElementById("projects");
+    document.addEventListener("DOMContentLoaded", () => {
+      projects.addEventListener("click", () => {});
+    });
+  },
+};
 
-export { createTaskDisplay, createTaskOnPage, displayNotes };
+export {
+  createTaskDisplay,
+  createTaskOnPage,
+  displayNotes,
+  createAddProjectDisplay,
+};

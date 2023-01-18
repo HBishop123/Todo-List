@@ -2,6 +2,7 @@ import {
   createTaskDisplay,
   createTaskOnPage,
   displayNotes,
+  createAddProjectDisplay,
 } from "./DOM_elements.js";
 
 import {
@@ -62,6 +63,10 @@ const flowOfTasks = (function () {
   // hide and show task form
   createTaskDisplay.appendDisplay();
   createTaskDisplay.hideDisplay();
+
+  // show and hide the add project form
+  createAddProjectDisplay.revealProjectDisplay()
+  createAddProjectDisplay.hideProjectDisplay()
 
   // collect the form data and pushes it to the task array.
   // data is taken from the task array and pushed to the display for the user
