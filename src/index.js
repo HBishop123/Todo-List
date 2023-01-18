@@ -13,12 +13,14 @@ import {
 // Object that stores Data of the tasks
 export const storingData = {
   taskArray: [],
+  projects: [],
   // this counter allows the correct task object to be appended to the page
   taskArrayCounter: 0,
   deleteButtonCounter: 0,
 };
 
 console.log(storingData.taskArray);
+console.log(storingData.projects);
 // class constructor for the task object
 class toDo {
   constructor(title, dueDate, priority, notes) {
@@ -59,19 +61,54 @@ const useFormData = {
   },
 };
 
+class Project {
+  constructor(name, array) {
+    this.name = name;
+    this.array = array;
+  }
+}
+
+const createProjectListing = {
+  grabProjectFormData: function (e) {
+    e.preventDefault();
+
+    const project = {
+      name: document.querySelector("#name-input").value,
+      array: [],
+    };
+    const name = project.name;
+    const array = project.array;
+
+    let result = new Project(name, array);
+    storingData.projects.push(result);
+    document.forms[0].reset();
+    return this.grabProjectFormData;
+  },
+  attachEventListener: function () {
+    document.addEventListener("DOMContentLoaded", () => {
+      document
+        .getElementById("submit-lower")
+        .addEventListener("click", this.grabProjectFormData);
+    });
+  },
+};
+
 const flowOfTasks = (function () {
   // hide and show task form
   createTaskDisplay.appendDisplay();
   createTaskDisplay.hideDisplay();
 
   // show and hide the add project form
-  createAddProjectDisplay.revealProjectDisplay()
-  createAddProjectDisplay.hideProjectDisplay()
+  createAddProjectDisplay.revealProjectDisplay();
+  createAddProjectDisplay.hideProjectDisplay();
 
   // collect the form data and pushes it to the task array.
   // data is taken from the task array and pushed to the display for the user
   useFormData.attachEventListener();
   createTaskOnPage.pushTaskToPage();
+
+  // collect the project form data and pushes it to an array
+  createProjectListing.attachEventListener();
 
   // controls the notes page
   displayNotes.showNotesPopup();

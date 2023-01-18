@@ -15,6 +15,7 @@ export const pushNotesToTaskArray = {
   },
 };
 
+// deletes the correct item from array of objects
 export const deleteButtonFunctionality = {
   deleteButtonFunction: function () {
     document.addEventListener("DOMContentLoaded", () => {
