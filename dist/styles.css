@@ -67,6 +67,10 @@ main {
   margin-bottom: 30px;
 }
 
+#add-task:hover {
+  scale: 1.2;
+}
+
 h1 {
   padding-top: 40px;
 }
@@ -221,4 +225,11 @@ form {
 #projects:hover {
   cursor: pointer;
   scale: 1.2;
+}
+
+#new-project {
+  position: absolute;
+  background-color: blue;
+  width: 100px;
+  height: 100px;
 }
