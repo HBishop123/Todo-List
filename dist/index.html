@@ -24,9 +24,6 @@
         <div class="sidebar-bottom">
           <h2 id="projects">Projects +</h2>
         </div>
-        <form>
-          <input type="text" id="project-name" placeholder="hi" required />
-        </form>
       </div>
       <div class="main-area">
         <h1>General Tasks</h1>
@@ -39,12 +36,7 @@
           <div class="second-layer">
             <div class="second-layer-left">
               <p>Title:</p>
-              <input
-                type="text"
-                id="form-text"
-                placeholder="Enter Title"
-                required
-              />
+              <input type="text" id="form-text" required />
               <p id="note-text">Notes:</p>
               <textarea name="notes" id="notes"></textarea>
             </div>
@@ -62,6 +54,20 @@
           <div class="third-layer">
             <button id="submit" type="submit">Submit</button>
             <button id="cancel" type="reset">Close</button>
+          </div>
+        </form>
+
+        <form id="add-project">
+          <div class="top-layer">
+            <h2>New Project</h2>
+            <p id="delete-button-task">X</p>
+          </div>
+          <div class="second-layer-project">
+            <p>Name:</p>
+            <input type="text" required />
+          </div>
+          <div class="third-layer">
+            <button id="submit-lower" type="submit">Submit</button>
           </div>
         </form>
       </div>
