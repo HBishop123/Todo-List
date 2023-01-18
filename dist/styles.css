@@ -63,6 +63,10 @@ main {
   gap: 20px;
 }
 
+#add-task {
+  margin-bottom: 30px;
+}
+
 h1 {
   padding-top: 40px;
 }
@@ -212,4 +216,9 @@ form {
   to {
     opacity: 1;
   }
+}
+
+#projects:hover {
+  cursor: pointer;
+  scale: 1.2;
 }

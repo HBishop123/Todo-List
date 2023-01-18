@@ -149,4 +149,15 @@ const displayNotes = {
   },
 };
 
+const projects = {
+  projectLink: function() {
+    const projects = document.getElementById('projects')
+    document.addEventListener('DOMContentLoaded', () => {
+      projects.addEventListener('click', () => {
+        
+      })
+    })
+  }
+}
+
 export { createTaskDisplay, createTaskOnPage, displayNotes };
