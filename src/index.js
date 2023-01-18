@@ -3,6 +3,7 @@ import {
   createTaskOnPage,
   displayNotes,
   createAddProjectDisplay,
+  projects,
 } from "./DOM_elements.js";
 
 import {
@@ -78,7 +79,7 @@ const createProjectListing = {
     };
     const name = project.name;
     const array = project.array;
-    
+
     let result = new Project(name, array);
     storingData.projects.push(result);
     document.forms[0].reset();
@@ -118,4 +119,6 @@ const flowOfTasks = (function () {
 
   // delete-button functionality
   deleteButtonFunctionality.deleteButtonFunction();
+
+  projects.projectLink()
 })();

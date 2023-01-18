@@ -190,9 +190,14 @@ const displayNotes = {
 
 const projects = {
   projectLink: function () {
-    const projects = document.getElementById("projects");
+    const sidebar = document.querySelector('.sidebar-bottom')
     document.addEventListener("DOMContentLoaded", () => {
-      projects.addEventListener("click", () => {});
+      document.getElementById('submit-lower').addEventListener("click", () => {
+        const project = document.createElement('p');
+        project.innerHTML = "1"
+        sidebar.appendChild(project)
+
+      });
     });
   },
 };
@@ -202,4 +207,5 @@ export {
   createTaskOnPage,
   displayNotes,
   createAddProjectDisplay,
+  projects
 };
