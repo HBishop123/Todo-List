@@ -57,13 +57,13 @@ const createAddProjectDisplay = {
 
     cancelButtonCross.addEventListener("click", () => {
       addProject.style.pointerEvents = "auto";
-      addTask.style.display = "none";
+      addTask.style.display = "block";
       lowerForm.style.display = "none";
     });
 
     submitButton.addEventListener("click", () => {
       addProject.style.pointerEvents = "auto";
-      addTask.style.display = "none";
+      addTask.style.display = "block";
       lowerForm.style.display = "none";
     });
   },
@@ -101,6 +101,9 @@ const createTaskOnPage = {
     // creating title of task
     const title = document.createElement("p");
     title.innerText = storingData.taskArray[storingData.taskArrayCounter].title;
+    if(title.innerText === ""){
+      title.innerText = "Task Undefined"
+    }
     title.style.position = "absolute";
     titleContainer.appendChild(title);
 

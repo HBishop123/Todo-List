@@ -78,7 +78,7 @@ const createProjectListing = {
     };
     const name = project.name;
     const array = project.array;
-
+    
     let result = new Project(name, array);
     storingData.projects.push(result);
     document.forms[0].reset();
